@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { BooksContext } from "../contexts/booksContext";
 import BookItem from "./bookItem";
 const BookList = () => {
-  return (
+  const { books } = useContext(BooksContext);
+  return books.length ? (
     <div className="book-list">
       <ul>
-        <BookItem />
+        {books.map((book) => {
+          return <BookItem key={book.id} bookDitails={book} />;
+        })}
       </ul>
     </div>
+  ) : (
+    <div className="empty">No Books</div>
   );
 };
 
