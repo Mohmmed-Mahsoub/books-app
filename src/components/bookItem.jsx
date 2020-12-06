@@ -1,9 +1,10 @@
 import React from "react";
-const BookItem = () => {
+const BookItem = (props) => {
+  const { bookDitails } = props;
   return (
     <li>
-      <div className="title">booktitle</div>
-      <div className="author">bookauthor</div>
+      <div className="title">{bookDitails.title}</div>
+      <div className="author">{bookDitails.author}</div>
     </li>
   );
 };
