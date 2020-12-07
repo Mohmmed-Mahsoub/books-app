@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { BooksContext } from "../contexts/booksContext";
 const NewBookForm = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
+  const { dispatch } = useContext(BooksContext);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, author);
+    dispatch({ type: "ADD_book", bookPayload: { title, author } });
     setTitle("");
     setAuthor("");
   };
