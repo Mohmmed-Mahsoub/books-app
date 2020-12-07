@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { BooksContext } from "../contexts/booksContext";
 const BookItem = (props) => {
+  const { dispatch } = useContext(BooksContext);
+  console.log(dispatch);
   const { bookDitails } = props;
+
   return (
-    <li>
+    <li onClick={() => dispatch({ type: "DEL_BOOK", id: bookDitails.id })}>
       <div className="title">{bookDitails.title}</div>
       <div className="author">{bookDitails.author}</div>
     </li>

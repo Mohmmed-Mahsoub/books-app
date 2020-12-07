@@ -9,8 +9,8 @@ function App() {
       <Navbar />
       <BooksContextProvider>
         <BookList />
+        <NewBookForm />
       </BooksContextProvider>
-      <NewBookForm />
     </div>
   );
 }
