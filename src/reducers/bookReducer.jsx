@@ -1,6 +1,5 @@
 import uuid from "react-uuid";
 export const bookReducer = (state, action) => {
-  console.log(state, action);
   switch (action.type) {
     case "ADD_book":
       return [

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { BooksContext } from "../contexts/booksContext";
 const BookItem = (props) => {
   const { dispatch } = useContext(BooksContext);
-  console.log(dispatch);
   const { bookDitails } = props;
 
   return (
