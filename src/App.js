@@ -6,8 +6,8 @@ import BooksContextProvider from "./contexts/booksContext";
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <BooksContextProvider>
+        <Navbar />
         <BookList />
         <NewBookForm />
       </BooksContextProvider>
